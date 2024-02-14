@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { analytics } from "./utils/analytics";
 
 export default async function middleware(req: NextRequest) {
-  if (req.nextUrl.pathname === "/") {
+  if (req.nextUrl.pathname === "https://analytics-app-nextjs-j99x4gr7z-lucasbelich.vercel.app/") {
     try {
       analytics.track("pageview", {
         page: "/",
@@ -16,5 +16,5 @@ export default async function middleware(req: NextRequest) {
 }
 
 export const matcher = {
-  matcher: ["/"],
+  matcher: ["https://analytics-app-nextjs-j99x4gr7z-lucasbelich.vercel.app/"],
 };
