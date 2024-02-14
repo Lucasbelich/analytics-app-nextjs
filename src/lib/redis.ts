@@ -1,6 +1,6 @@
 import { Redis } from "@upstash/redis";
 
 export const redis = new Redis({
-  url: "https://us1-credible-stork-39666.upstash.io",
-  token: process.env.REDIS_KEY!,
+  url: process.env.UPSTASH_REDIS_REST_URL!,
+  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
 });
